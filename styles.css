@@ -26,157 +26,42 @@ p {
 
 /* Navigation Bar */
 .navbar {
-    background-color: #333;
-    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
-}
-
-.navbar nav ul {
-    display: flex;
-    justify-content: space-around;
-}
-
-.navbar nav ul li a {
-    color: rgb(0, 0, 0);
-    padding: 0.5rem 1rem;
-    display: block;
-}
-/* Navbar styling */
-.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
-    backdrop-filter: blur(-20px); /* Glassy effect */
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    z-index: 999; /* Ensure it's above other content */
 }
 
-/* Logo styling */
-.logo {
-    font-family: 'Unique Font', 'Times New Roman', Times, serif; /* Use your unique font */
+.navbar .logo {
+    font-family: 'Unique Font', 'Times New Roman', Times, serif;
     font-size: 24px;
-    color: #000000; /* Text color */
-}
-
-/* Navigation styling */
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #000000; /* Text color */
-    font-size: 18px;
-    transition: color 0.3s ease; /* Smooth transition on hover */
-}
-
-nav ul li a:hover {
-    color: #0c0c0c; /* Text color on hover */
-}
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-h1, h2, h3 {
-    margin: 0;
-}
-
-p {
-    margin: 0;
-}
-
-/* Navigation Bar */
-.navbar {
-    background-color: #333;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    color: #000;
 }
 
 .navbar nav ul {
     display: flex;
     justify-content: space-around;
+}
+
+.navbar nav ul li {
+    margin-right: 20px;
 }
 
 .navbar nav ul li a {
     color: #000;
     padding: 0.5rem 1rem;
-    display: block;
-}
-
-/* Navbar styling */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
-    backdrop-filter: blur(-20px); /* Glassy effect */
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    z-index: 999; /* Ensure it's above other content */
-}
-
-/* Logo styling */
-.logo {
-    font-family: 'Unique Font', 'Times New Roman', Times, serif; /* Use your unique font */
-    font-size: 24px;
-    color: #000; /* Text color */
-}
-
-/* Navigation styling */
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #000; /* Text color */
     font-size: 18px;
-    transition: color 0.3s ease; /* Smooth transition on hover */
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #0c0c0c; /* Text color on hover */
+.navbar nav ul li a:hover {
+    color: #0c0c0c;
 }
 
 /* Menu icon for mobile */
@@ -184,34 +69,6 @@ nav ul li a:hover {
     display: none;
     font-size: 24px;
     cursor: pointer;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-        position: absolute;
-        top: 60px; /* Adjust based on your navbar height */
-        left: 0;
-        padding: 20px 0;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .menu-icon {
-        display: block;
-    }
 }
 
 /* Hero Section */
@@ -225,26 +82,28 @@ nav ul li a:hover {
 
 .hero-content {
     max-width: 800px;
-    
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-buttons {
+    margin-top: 20px;
 }
 
 .hero-buttons .button {
-    margin: 1rem;
-    padding: 1rem 2rem;
-    border: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: #fff;
     background-color: #28a745;
-    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.hero-buttons .button.calculate:hover {
+.hero-buttons .button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.hero-buttons .button.explore:hover {
-    transform: translateY(-5px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -256,8 +115,7 @@ nav ul li a:hover {
 }
 
 .calculator-cards {
-    display: flex
-    ;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
@@ -287,37 +145,6 @@ nav ul li a:hover {
 .calculator-card .button {
     padding: 0.5rem 1rem;
     background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.calculator-form {
-    display: none;
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 1.5rem auto;
-    max-width: 600px;
-}
-
-.calculator-form h3 {
-    margin-bottom: 1rem;
-}
-
-.calculator-form input {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    width: calc(100% - 1rem);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.calculator-form button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #28a745;
     color: white;
     border: none;
     cursor: pointer;
@@ -409,15 +236,14 @@ footer .disclaimer {
     align-items: center;
 }
 
-.popup {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
 .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
     text-align: center;
+    position: relative;
 }
 
 .popup .close-btn {
@@ -432,8 +258,28 @@ footer .disclaimer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar nav ul {
+        display: none;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    .navbar nav ul.show {
+        display: flex;
+    }
+
+    .navbar nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
     }
 
     .hero-buttons .button {
@@ -446,114 +292,9 @@ footer .disclaimer {
         align-items: center;
     }
 }
-/* Add styles for the popup */
-.popup-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.popup-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 80%;
-    text-align: center;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #888;
-}
-/* Popup Overlay */
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    display: none; /* Initially hidden */
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Ensure it appears above other content */
-}
-
-.popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 80%;
-    text-align: center;
-    position: relative; /* Required for proper z-index stacking */
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #888;
-}
-.hero {
-    position: relative;
-
-   
-    
-}
-
-.hero-bg {
-    position: absolute;
-    width: 145%;
-    height: 135%;
-    background-image: url('1.jpeg'); /* Replace 'hero-background.jpg' with the path to your background image */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.8; /* Adjust the opacity as needed */
-    z-index: -1; /* Ensure the background image stays behind other content */
-}
-
-.hero-content {
-    position: relative; /* Ensure the content stays on top of the background image */
-
-}
-
-.hero-buttons {
-    margin-top: 20px; /* Add margin between the text and buttons */
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 0 10px; /* Add margin between buttons */
-    text-decoration: none;
-    color: #fff;
-    background-color: #007bff;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #0056b3;
+/* JavaScript to toggle menu */
+function toggleMenu() {
+    const navLinks = document.querySelector('.navbar nav ul');
+    navLinks.classList.toggle('show');
 }
